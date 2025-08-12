@@ -1,0 +1,58 @@
+[
+  {
+    "year": "1997",
+    "title": "First Public Launch",
+    "description": "The project’s first public release and demo.",
+    "imageURL": "https://picsum.photos/seed/event1/800/450",
+    "category": "release"
+  },
+  {
+    "year": "1999",
+    "title": "Major Redesign",
+    "description": "UI and architecture redesign for better performance.",
+    "imageURL": "https://picsum.photos/seed/event2/800/450",
+    "category": "design"
+  },
+  {
+    "year": "2005",
+    "title": "International Expansion",
+    "description": "Released in multiple languages and regions.",
+    "imageURL": "https://picsum.photos/seed/event3/800/450",
+    "category": "milestone"
+  },
+  {
+    "year": "2010",
+    "title": "Mobile Support Added",
+    "description": "Full responsive and mobile support launched.",
+    "imageURL": "https://picsum.photos/seed/event4/800/450",
+    "category": "feature"
+  },
+  {
+    "year": "2015",
+    "title": "Analytics Module",
+    "description": "Introduced analytics and reporting tools.",
+    "imageURL": "https://picsum.photos/seed/event5/800/450",
+    "category": "feature"
+  },
+  {
+    "year": "2018",
+    "title": "Performance Rewrite",
+    "description": "Major speed-up and memory improvements.",
+    "imageURL": "https://picsum.photos/seed/event6/800/450",
+    "category": "refactor"
+  },
+  {
+    "year": "2021",
+    "title": "AI Insights",
+    "description": "Added AI-based recommendations for users.",
+    "imageURL": "https://picsum.photos/seed/event7/800/450",
+    "category": "feature"
+  },
+  {
+    "year": "2024",
+    "title": "Modern UI Refresh",
+    "description": "Design refresh with accessibility improvements.",
+    "imageURL": "https://picsum.photos/seed/event8/800/450",
+    "category": "design"
+  }
+]
