@@ -1,0 +1,58 @@
+[
+  {
+    "year": 2000,
+    "title": "Y2K",
+    "description": "The world prepared for the Y2K bug.",
+    "imageURL": "https://via.placeholder.com/300x200?text=Y2K",
+    "category": "Technology"
+  },
+  {
+    "year": 2004,
+    "title": "Facebook Launch",
+    "description": "Facebook was launched by Mark Zuckerberg.",
+    "imageURL": "https://via.placeholder.com/300x200?text=Facebook",
+    "category": "Social Media"
+  },
+  {
+    "year": 2007,
+    "title": "First iPhone",
+    "description": "Apple introduced the first iPhone.",
+    "imageURL": "https://via.placeholder.com/300x200?text=iPhone",
+    "category": "Technology"
+  },
+  {
+    "year": 2008,
+    "title": "Global Financial Crisis",
+    "description": "The world faced a major financial crisis.",
+    "imageURL": "https://via.placeholder.com/300x200?text=Crisis",
+    "category": "Economy"
+  },
+  {
+    "year": 2012,
+    "title": "Curiosity Rover Lands on Mars",
+    "description": "NASA successfully landed Curiosity rover on Mars.",
+    "imageURL": "https://via.placeholder.com/300x200?text=Mars",
+    "category": "Space"
+  },
+  {
+    "year": 2016,
+    "title": "Pokemon Go Release",
+    "description": "Pokemon Go became a global phenomenon.",
+    "imageURL": "https://via.placeholder.com/300x200?text=Pokemon+Go",
+    "category": "Gaming"
+  },
+  {
+    "year": 2020,
+    "title": "COVID-19 Pandemic",
+    "description": "COVID-19 pandemic changed the world.",
+    "imageURL": "https://via.placeholder.com/300x200?text=COVID-19",
+    "category": "Health"
+  },
+  {
+    "year": 2023,
+    "title": "AI Boom",
+    "description": "Generative AI tools gained massive popularity.",
+    "imageURL": "https://via.placeholder.com/300x200?text=AI",
+    "category": "Technology"
+  }
+]
