@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Accessible Timeline</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .timeline { display: flex; gap: 1rem; margin-bottom: 2rem; }
+    .timeline button { padding: 0.5rem 1rem; cursor: pointer; }
+    .active { background: #005bbb; color: white; }
+    dialog {
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Accessible Timeline</h1>
+  
+  <div class="timeline" role="list">
+    <button role="listitem" aria-current="step" data-event="Event 1">Event 1</button>
+    <button role="listitem" data-event="Event 2">Event 2</button>
+    <button role="listitem" data-event="Event 3">Event 3</button>
+  </div>
+
+  <!-- Accessible Modal -->
+  <dialog id="modal" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <h2 id="modal-title">Event Details</h2>
+    <p id="modal-desc">More information about this event.</p>
+    <button id="closeModal">Close</button>
+  </dialog>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const closeModalBtn = document.getElementById('closeModal');
+    let lastFocusedButton = null;
+
+    // Open modal when a timeline button is clicked
+    document.querySelectorAll('.timeline button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        lastFocusedButton = btn;
+        document.getElementById('modal-title').textContent = btn.dataset.event;
+        modal.showModal(); // <-- This actually opens the <dialog>
+        closeModalBtn.focus();
+      });
+
+      // Arrow key navigation between timeline markers
+      btn.addEventListener('keydown', (e) => {
+        const buttons = Array.from(document.querySelectorAll('.timeline button'));
+        let idx = buttons.indexOf(e.currentTarget);
+        if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          buttons[(idx + 1) % buttons.length].focus();
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          buttons[(idx - 1 + buttons.length) % buttons.length].focus();
+        }
+      });
+    });
+
+    // Close modal on button click
+    closeModalBtn.addEventListener('click', () => {
+      modal.close();
+      if (lastFocusedButton) lastFocusedButton.focus();
+    });
+
+    // Close modal on ESC key
+    modal.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.close();
+        if (lastFocusedButton) lastFocusedButton.focus();
+      }
+    });
+  </script>
+</body>
+</html>
